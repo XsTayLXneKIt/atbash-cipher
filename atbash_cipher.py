@@ -4,7 +4,7 @@ def encode(plain_text):
     for char in plain_text:
         if char.isalpha():
             cipher_text += chr(ord("a") + (25 - (ord(char) - ord("a"))))
-        else:
+        elif char.isdigit():
             cipher_text += char
     return " ".join([cipher_text[i:i+5] for i in range(0, len(cipher_text), 5)])
 
